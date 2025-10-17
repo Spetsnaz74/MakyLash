@@ -17,14 +17,14 @@
       background-color: #ffb6c1;
       text-align: center;
       padding: 20px;
-      color: white;
+      color: #fff;
     }
 
     header img.salon {
       width: 100%;
       max-height: 300px;
       object-fit: cover;
-      border-bottom: 5px solid #ffb6c1;
+      border-bottom: 5px solid #ff8bb0;
     }
 
     h1 {
@@ -73,6 +73,10 @@
       border-radius: 10px;
       text-align: center;
       width: 250px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: transform 0.3s ease;
     }
 
     li img {
@@ -81,6 +85,12 @@
       object-fit: cover;
       border-radius: 15px;
       margin-bottom: 10px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    li img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
     }
 
     .whatsapp-float {
@@ -96,6 +106,9 @@
       font-size: 30px;
       box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
       z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       transition: 0.3s;
     }
 
@@ -103,8 +116,14 @@
       background-color: #20b358;
     }
 
-    .whatsapp-float i {
-      margin-top: 15px;
+    @media (max-width: 600px) {
+      main {
+        margin: 20px;
+        padding: 15px;
+      }
+      li {
+        width: 100%;
+      }
     }
   </style>
   <!-- Ícono de WhatsApp -->
@@ -113,7 +132,6 @@
 <body>
 
   <header>
-    <!-- Imagen principal del salón -->
     <img src="salon.jpg" alt="MakyLash Studio" class="salon">
     <h1>✨ MakyLash Studio ✨</h1>
     <p>Realza tu belleza natural con una mirada perfecta 💖</p>
@@ -122,7 +140,6 @@
   <main>
     <h2>Bienvenida a MakyLash Studio</h2>
     <p>En <strong>MakyLash Studio</strong> contamos con un espacio diseñado para realzar tu belleza natural, ofreciendo una experiencia cómoda, higiénica y profesional.</p>
-
     <p>Nos especializamos en <strong>extensiones de pestañas</strong>, aplicadas con técnicas rápidas y seguras, logrando resultados duraderos y elegantes.</p>
 
     <h3>Servicios</h3>
@@ -140,7 +157,8 @@
         🌸 <strong>Depilación de bozo y mentón</strong>
       </li>
       <li>
-        ☕ Variedad de cafés como Servicio extra
+        <img src="cafe.jpg" alt="Variedad de cafés y té">
+        ☕ <strong>Variedad de cafés y té</strong> como servicio extra
       </li>
     </ul>
 
@@ -152,7 +170,6 @@
     <p style="text-align:center; font-weight:bold; color:#e75480;">✨ En MakyLash, tu mirada es nuestra prioridad. ¡Ven a consentirte y luce una belleza única cada día! ✨</p>
   </main>
 
-  <!-- Botón flotante de WhatsApp -->
   <a href="https://wa.me/5363163432" target="_blank" class="whatsapp-float">
     <i class="fab fa-whatsapp"></i>
   </a>
